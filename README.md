@@ -53,7 +53,7 @@ terraform init
 Review the resources that will be created.
 
 ```bash
-terraform plan
+terraform plan -var-file=".tfvars" 
 ```
 
 ### 5. Apply the configuration
@@ -61,7 +61,7 @@ terraform plan
 Run the following command to deploy the resources to AWS.
 
 ```bash
-terraform apply
+terraform apply -var-file=".tfvars" 
 ```
 
 When prompted, type `yes` to confirm the infrastructure changes.
@@ -107,7 +107,7 @@ echo "Your very first web server" | sudo tee /var/www/html/index.html
 To avoid any unnecessary charges, destroy the resources once you’re done:
 
 ```bash
-terraform destroy
+terraform destroy -var-file=".tfvars" 
 ```
 
 Type `yes` to confirm.
